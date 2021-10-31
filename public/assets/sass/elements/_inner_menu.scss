@@ -1,0 +1,32 @@
+/* inner menu */
+
+.inner-menu {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    .list {
+        position: relative;
+        color: var(--heading-color);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 34px;
+        transition: all .3s;
+        &:not(:last-child) {
+            padding-right: 15px;
+        }
+        &:not(:first-child) {
+            padding-left: 15px;
+            &::before {
+                position: absolute;
+                content: "";
+                height: 40%;
+                width: 1px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background: var(--heading-color);
+            }
+        }
+    }
+}

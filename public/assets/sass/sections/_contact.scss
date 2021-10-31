@@ -1,0 +1,64 @@
+/* Contact area */
+
+.contact-promo-area {
+    div[class*=col] {
+        &:nth-child(3n+2) {
+            .single-contacts {
+                .contact-icon {
+                    background: var(--main-color-one);
+                }
+            }
+        }
+        &:nth-child(3n+3) {
+            .single-contacts {
+                .contact-icon {
+                    background: var(--main-color-two);
+                }
+            }
+        }
+    }
+}
+
+.single-contacts {
+    text-align: center;
+    background: rgba($main-color-three, .1);
+    padding: 30px;
+    border-radius: 5px;
+    height: 100%;
+    .contact-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        font-size: 40px;
+        color: $white;
+        background: var(--main-color-three);
+        text-align: center;
+        margin: 0 auto;
+        i {}
+    }
+    .contacts-contents {
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            margin-top: 20px;
+        }
+        .item-contents {
+            margin-top: 15px;
+            .item {
+                display: block;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 28px;
+                color: var(--light-color);
+                transition: all .3s;
+                &:hover {
+                    color: var(--main-color-one);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+/* Blog Details */
+
+.blog-details-area {}
+
+.blog-details-wrapper {}
+
+.single-blog-details {
+    &:not(:first-child) {
+        margin-top: 35px;
+    }
+    .tags {
+        margin-top: 30px;
+    }
+    .thumb {
+        img {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .details-para {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        margin-top: 30px;
+        color: var(--light-color);
+    }
+    blockquote {
+        background: var(--main-color-one);
+        padding: 25px 80px;
+        margin-top: 35px;
+        .content {
+            .blackquote-title {
+                font-size: 32px;
+                font-weight: 600;
+                position: relative;
+                line-height: 50px;
+                color: $white;
+                &::before {
+                    font-family: 'Line Awesome Free';
+                    font-weight: 900;
+                    content: "\f10d";
+                    margin-left: -30px;
+                }
+            }
+        }
+    }
+}
+
+.blog-details-thumb-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    .thumb {
+        min-width: 540px;
+        height: 340px;
+    }
+}
+
+
+/* Comment area */
+
+.comment-area {}
+
+.details-comment-content {
+    .single-commetns {
+        width: 100%;
+        margin-top: 30px;
+        .comment-label {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 26px;
+            color: var(--heading-color);
+            display: block;
+            margin-bottom: 15px;
+        }
+        .form--control {
+            height: 60px;
+            border: 1px solid rgba(#ddd, .5);
+            outline: none;
+            box-shadow: 0 0 10px #fff;
+            font-size: 14px;
+            line-height: 22px;
+            color: var(--light-color);
+            padding: 0 20px;
+            width: 100%;
+            transition: all .3s;
+            &:focus {
+                box-shadow: 0 0 18px rgba($main-color-one, .1);
+                border-color: rgba($main-color-one, .3);
+            }
+        }
+        .form--message {
+            padding: 20px 20px;
+            height: 160px;
+        }
+    }
+    button {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 34px;
+        background: var(--main-color-one);
+        color: $white;
+        border: 0;
+        outline: none;
+        border-radius: 5px;
+        padding: 15px 35px;
+        cursor: pointer;
+        margin-top: 35px;
+    }
+}
+
+.comments-flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}

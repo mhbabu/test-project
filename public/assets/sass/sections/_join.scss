@@ -1,0 +1,50 @@
+/* Join area */
+
+.join-area {
+    position: relative;
+    z-index: 2;
+}
+
+.join-shapes {
+    img {
+        position: absolute;
+        &:nth-child(1) {
+            top: 100px;
+            left: 180px;
+        }
+        &:nth-child(2) {
+            bottom: 60px;
+            right: 180px;
+        }
+        &:nth-child(3) {
+            bottom: 70px;
+            left: 110px;
+        }
+        &:nth-child(4) {
+            top: 60px;
+            right: -70px;
+        }
+    }
+}
+
+.join-content-wrapper {
+    max-width: 970px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.join-contents {
+    .title {
+        font-size: 65px;
+        font-weight: 700;
+        line-height: 85px;
+    }
+    .join-para {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
+        margin-top: 40px;
+        display: block;
+        color: var(--light-color);
+    }
+}

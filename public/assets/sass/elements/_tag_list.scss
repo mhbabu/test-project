@@ -1,0 +1,25 @@
+/* Tag list */
+
+.tags {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    .list {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+        font-size: 16px;
+        line-height: 20px;
+        transition: all .3s;
+        &:hover {
+            color: var(--main-color-one);
+            i {
+                color: var(--main-color-one);
+            }
+        }
+        i {
+            color: var(--main-color-three);
+            transition: all .3s;
+        }
+    }
+}

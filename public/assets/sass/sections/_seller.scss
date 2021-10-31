@@ -1,0 +1,63 @@
+/* Seller area */
+
+.seller-area {}
+
+.seller-wrapper {
+    &.seller-content-padding {
+        padding-left: 50px;
+    }
+}
+
+.seller-contents {
+    margin: 35px 0 0;
+    &.style-02 {
+        .seller-list {
+            li {
+                &::before {
+                    color: var(--main-color-two);
+                }
+                &:hover {
+                    a {
+                        color: var(--main-color-two);
+                    }
+                }
+            }
+        }
+    }
+    .seller-list {
+        padding: 0;
+        margin: 0 0 35px;
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            &:hover {
+                a {
+                    color: var(--main-color-one);
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            &::before {
+                content: "\f00c";
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+                color: var(--main-color-one);
+            }
+            a {
+                font-size: 16px;
+                display: inline-block;
+                color: var(--light-color);
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+.seller-thumbs {
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}

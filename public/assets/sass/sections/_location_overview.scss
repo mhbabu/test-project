@@ -1,0 +1,65 @@
+/* Details Overview */
+
+.location-overview-area {}
+
+.overview-list-all {
+    .overview-list {
+        margin-bottom: 50px;
+    }
+    .overview-location {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        @include responsive(allPhone) {
+            gap: 5px 30px;
+        }
+        .single-location {
+            background: $Zircon;
+            color: var(--heading-color);
+            width: calc(100% / 5 - 25px);
+            text-align: center;
+            padding: 40px 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all .3s;
+            @include responsive(allPhone) {
+                width: auto;
+                padding: 30px 30px;
+            }
+            @include responsive(xs) {
+                padding: 20px 20px;
+            }
+            @include responsive(vxxs) {
+                padding: 15px 15px;
+            }
+            &.active {
+                background: var(--main-color-one);
+                .location {
+                    color: $white;
+                }
+            }
+            &:hover {
+                background: var(--main-color-one);
+                .location {
+                    color: $white;
+                }
+            }
+            .location {
+                display: block;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 34px;
+                transition: all .3s;
+                @include responsive(allPhone) {
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+                @include responsive(vxxs) {
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+/* Category Service area */
+
+.category-services-area {}
+
+.category-service {
+    .title {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 50px;
+    }
+}
+
+.single-category-service {}
+
+.single-select {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    .select-sort {
+        margin-right: 10px;
+        width: 80px;
+    }
+    .nice-select {
+        background-color: #fff;
+        border-radius: 5px;
+        border: solid 1px #dddddd;
+        width: 100%;
+        color: var(--light-color);
+        height: 48px;
+        line-height: 48px;
+        font-size: 14px;
+        &.open {
+            &::after {
+                transform: translateY(-50%) rotate(-135deg);
+            }
+        }
+        &::after {
+            border-bottom: 1px solid var(--light-color);
+            border-right: 1px solid var(--light-color);
+            height: 8px;
+            margin-top: -2px;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%) rotate( 45deg);
+            width: 8px;
+        }
+        .list {
+            width: 100%;
+        }
+    }
+}
