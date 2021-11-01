@@ -15,12 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[ServiceBookingController::class,'serviceBooking']);
-Route::post('service-booking-payment', [ServiceBookingController::class,'serviceBookingPayment'])->name('payment-with-service-booking');
+Route::get('/',[SslCommerzPaymentController::class,'serviceBooking']);
 
-Route::group(['prefix' => 'sslwireless'], function () {
-    Route::post('payment/success', [ServiceBookingController::class,'sslSubscriptionSuccess']);
-    Route::post('payment/fail/{refId?}', [ServiceBookingController::class,'sslSubscriptionFail']);
-    Route::post('payment/cancel/{refId?}', [ServiceBookingController::class,'sslSubscriptionCancel']);
-    Route::post('payment/ipn/{refId?}', [ServiceBookingController::class,'sslResponseIpn']);
-});

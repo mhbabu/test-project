@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBookingInformationsTable extends Migration
+class CreateOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateBookingInformationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('booking_informations', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('transaction_id')->nullable();
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
@@ -30,7 +31,9 @@ class CreateBookingInformationsTable extends Migration
             $table->string('notes')->nullable();
             $table->integer('three_bedroom')->nullable();
             $table->integer('two_bedroom')->nullable();
-            $table->float('total_amount', 10, 2)->nullable();
+            $table->float('amount',10,2)->nullable();
+            $table->string('status')->nullable();
+            $table->string('currency')->nullable();
             $table->timestamps();
         });
     }
@@ -42,6 +45,6 @@ class CreateBookingInformationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('booking_informations');
+        Schema::dropIfExists('orders');
     }
 }
